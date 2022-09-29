@@ -1,0 +1,135 @@
+{
+  "layer": "top",
+  "modules-left": [
+    "custom/launcher",
+    "cpu",
+    "memory",
+    "wlr/workspaces",
+    "custom/media",
+  ],
+  "modules-center": [
+    "tray"
+  ],
+  "modules-right": [
+    "backlight",
+    "pulseaudio",
+    "network",
+    "bluetooth",
+    "battery",
+    "clock",
+    "custom/power"
+  ],
+  "pulseaudio": {
+    "tooltip": false,
+    "scroll-step": 5,
+    "format": "{icon} {volume}%",
+    "format-muted": "{icon} {volume}%",
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "format-icons": {
+      "default": [
+        "",
+        "",
+        ""
+      ]
+    }
+  },
+  "bluetooth": {
+    "on-click":"blueman-manager",
+    "format": " {status}",
+    "format-connected": "",
+    "format-connected-battery": " {device_alias} {device_battery_percentage}%",
+    "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+    "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%"
+  },
+  "wlr/workspaces": {
+    "format": "{icon}",
+    "active-only":false,
+    "on-click": "activate",
+    "format-icons": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "ﰤ",
+      "urgent": "",
+      "active": "",
+      "default": ""
+    }
+  },
+  "network": {
+    "tooltip": true,
+    "format-wifi": " ",
+    "tooltip-format-wifi":"{essid}",
+    "format-ethernet": "ETHERNET",
+    "on-click":"/home/mauro/.config/rofi/rofi-network-manager/rofi-network-manager.sh",
+  },
+  "backlight": {
+    "tooltip": true,
+    "format": " {percent}%",
+    "interval": 1,
+    "on-scroll-up": "light -A 5",
+    "on-scroll-down": "light -U 5"
+  },
+  "battery": {
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 20
+    },
+    "format": "{icon}  {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-alt": "{time} {icon}",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  "tray": {
+    "icon-size": 18,
+    "spacing": 10,
+    "interval": 5
+  },
+  "clock": {
+    "format": "{: %I:%M %p   %d/%m/%Y}"
+  },
+  "cpu": {
+    "interval": 15,
+    "format": " {}%",
+    "max-length": 10
+  },
+  "memory": {
+    "interval": 30,
+    "format": " {}%",
+    "max-length": 10
+  },
+  "custom/media": {
+    "format": "{icon} {}",
+    "return-type": "json",
+    "max-length": 20,
+    "format-icons": {
+      "spotify": " ",
+      "default": " "
+    },
+    "exec": "$HOME/.config/media-player/mediaplayer.py 2> /dev/null",
+    "on-click": "playerctl play-pause"
+  },
+  "custom/launcher": {
+    "format": "ﮊ",
+    "on-click": "rofi --show run",
+    "on-click-right": "killall rofi"
+  },
+  "custom/power": {
+    "format": " ",
+    "on-click": "bash ~/.config/rofi/bin/leave.sh",
+  },
+  "custom/wallpaper": {
+    "format": " ",
+    "on-click": "bash ~/.config/system_scripts/pkill_bc"
+  }
+}

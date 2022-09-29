@@ -1,0 +1,25 @@
+import:
+    # uncomment the flavour you want below:
+    - ~/.config/alacritty/catppuccin/catppuccin-mocha.yml
+    #   #  - ~/.config/alacritty/catppuccin/catppuccin-frappe.yml
+    #   #  - ~/.config/alacritty/catppuccin/catppuccin-latte.yml
+
+
+window:
+  opacity: 0.83
+  # Window dimensions (changes require restart)
+  #
+  # Specified in number of columns/lines, not pixels.
+  # If both are `0`, this setting is ignored.
+  dimensions:
+    columns: 125
+    lines: 25
+
+  padding:
+    x: 5
+    y: 5
+
+font:
+  normal:
+    family: CaskaydiaCove Nerd Font
+  size: 12.0
