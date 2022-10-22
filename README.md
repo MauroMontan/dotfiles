@@ -1,34 +1,36 @@
-# Hyperland dotfiles 
+# Hyperland dotfiles
 
-This configurations will be available soon ! 
-
-
+This configurations will be available soon !
 
 ### Setup Specifications
 
-| OS             | Arch            |
-|--------------- | --------------- |
-| Editor         | Neovim          |
-| WM             | Hyperland       |
-| Status Bar     | Waybar          |
-| Screenshoot    | Wayshoot        |
-| Notifications  | Dunst           |
-| Lockscreen     | GtlLock         |
-| App launcher   | Rofi            |
-| Terminal       | Alacritty       |
-| Shell          | Zsh             |
-| Clipboard manager | Xclip        |
-| Wallpaper utility | Hyprpaper    |
+| OS                | Arch            |
+| ----------------- | --------------- |
+| Editor            | Neovim          |
+| WM                | Hyperland       |
+| Status Bar        | Waybar          |
+| Screenshoot       | Wayshoot,slurp  |
+| Notifications     | Dunst, dunstify |
+| Lockscreen        | GtlLock         |
+| App launcher      | Rofi            |
+| Terminal          | Alacritty       |
+| Shell             | Zsh             |
+| Clipboard manager | Xclip           |
+| Wallpaper utility | Hyprpaper       |
 
+Other required installations:
+
+- light
+- playerctl
+- blueman
 
 ### About Colors and themes
 
 Im using Mocha Pallete from [here](https://github.com/catppuccin/catppuccin)
 
-
 ### Used and Recommended fonts.
 
-- Caskaydia Cove Nerd Font 
+- Caskaydia Cove Nerd Font
 
 - Agave Nerd Fonts
 
